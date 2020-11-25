@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import os
 
-
 class Blur:
     # The output Directory
     output_file = "data/output/"
