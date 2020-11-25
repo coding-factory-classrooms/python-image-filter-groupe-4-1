@@ -1,2 +1,1 @@
-class BlackAndWhite:
-
+#class BlackAndWhite:
