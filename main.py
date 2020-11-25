@@ -1,3 +1,6 @@
-from filters.black_and_white import BlackAndWhite
+
 from filters.blur import Blur
-from filters.dilation import Dilation
+
+
+dilati = Blur()
+dilati.blur_image("./data/images/eren.png")
