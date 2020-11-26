@@ -1,6 +1,6 @@
 import os
 import cv2
-from log.logger import Logger
+from logger.logger import Logger
 
 
 class ReadWrite:

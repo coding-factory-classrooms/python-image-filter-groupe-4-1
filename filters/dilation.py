@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from log.logger import Logger
+from logger.logger import Logger
 
 
 class Dilation:
