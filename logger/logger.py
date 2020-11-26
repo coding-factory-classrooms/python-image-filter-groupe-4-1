@@ -4,7 +4,7 @@ from datetime import datetime
 class Logger:
 
     # The logger file
-    log_file = "imagefilter.logger"
+    log_file = "imagefilter.log"
 
     def log(self, message):
         """
