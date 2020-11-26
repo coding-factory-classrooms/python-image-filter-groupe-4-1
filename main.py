@@ -9,7 +9,6 @@ parser = argparse.ArgumentParser(description='Filter a directory of images')
 parser.add_argument('-i', '--input', type=str, metavar='', required=True, help='Input directory')
 parser.add_argument('-o', '--output', type=str, metavar='', required=True, help='Output directory')
 parser.add_argument('-f', '--filters', type=str, metavar='', required=True, help='Apply Filters to output directory')
-parser.add_argument('-l', '--logfile', type )
 args = parser.parse_args()
 
 

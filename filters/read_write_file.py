@@ -1,15 +1,17 @@
 import os
 import cv2
+from log.logger import Logger
 
 
 class ReadWrite:
-
+    logger = Logger()
 
     def read_file(self, filepath):
         """
         :param filepath:
         :return:
         """
+        self.logger.log(f"Opening image {filepath}")
         return cv2.imread(filepath)
 
     def write_file(self, filepath, output_image, output_directory):
@@ -25,4 +27,6 @@ class ReadWrite:
         if not os.path.exists(output_directory):
             # Create the directory if not exist
             os.makedirs(output_directory)
+
+        self.logger.log(f"Saving result image {output_directory}{file_name}")
         return cv2.imwrite(f'{output_directory}{file_name}', output_image)

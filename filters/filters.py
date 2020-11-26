@@ -9,7 +9,7 @@ class Filters:
     def filter(self, file_path, filter_type, output_directory):
         """
         Filter method
-        :param output_directory:
+        :param output_directory: The directory where filtered image are stored
         :param file_path: The file path
         :param filter_type: The type of filter to apply " dilate, blur or black_and_white "
         :return:
@@ -31,5 +31,5 @@ class Filters:
                     img = blur.blur_image(img, int(intensity))
             elif t.startswith('grayscale'):
                 black_white = BlackAndWhite()
-                img = black_white.black_and_white_filter(img)
+                img = black_white.grayscale(img)
         read_write.write_file(file_path, img, output_directory)
