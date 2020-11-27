@@ -2,6 +2,7 @@ from filters.read_write_file import ReadWrite
 from filters.blur import Blur
 from filters.black_and_white import BlackAndWhite
 from filters.dilation import Dilation
+from filters.filter_ze_team import FilterZeTeam
 
 
 class Filters:
@@ -32,4 +33,7 @@ class Filters:
             elif t.startswith('grayscale'):
                 black_white = BlackAndWhite()
                 img = black_white.grayscale(img)
+            elif t.startswith('filterzeteam'):
+                filter_ze_team = FilterZeTeam()
+                img = filter_ze_team.put_text(img)
         read_write.write_file(file_path, img, output_directory)
