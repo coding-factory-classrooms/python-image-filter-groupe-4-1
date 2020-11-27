@@ -62,16 +62,13 @@ def conf_from_ini_file(ini_file):
 
 config_ini = conf_from_ini_file('config.ini')
 config = config_ini
-print(config["input"])
+
+filtered = args.filters or config["filters"]
+output = args.output or config["output"]
+input = args.input or config["input"]
 
 if __name__ == '__main__':
-    filter_directory(args.input, args.filters, args.output)
+    filter_directory(input, filtered, output)
     if args.log:
         logger = Logger()
         logger.dump_log()
-    if args.config:
-        args.input = config["input"]
-        args.output = config["output"]
-        args.filters = config["filters"]
-        filter_directory(args.input, args.filters, args.output)
-
