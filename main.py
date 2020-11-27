@@ -69,7 +69,7 @@ if __name__ == '__main__':
     if args.log:
         logger = Logger()
         logger.dump_log()
-    elif args.config:
+    if args.config:
         args.input = config["input"]
         args.output = config["output"]
         args.filters = config["filters"]
